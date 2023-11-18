@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Button from './components/Button'; // Path to your Button component file
+import Counter from './hooks/Counter'; // Path to your Counter component file
+import EditorComponent from './components/EditorComponent'; // Path to your EditorComponent file
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button text="Click me" onClick={() => console.log('Button clicked!')} />
+      <Counter />
+      <EditorComponent />
     </div>
   );
-}
+};
 
 export default App;
